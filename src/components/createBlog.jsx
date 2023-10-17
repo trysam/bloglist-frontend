@@ -33,6 +33,7 @@ const CreateBlog = ({ createNewBlog }) => {
       <input
         name="blogTitle"
         type="text"
+        placeholder='title'
         value={blogTitle}
         onChange={({ target }) => setBlogTitle(target.value)}
         required
@@ -43,6 +44,7 @@ const CreateBlog = ({ createNewBlog }) => {
       <input
         name="author"
         type="text"
+        placeholder='author'
         value={author}
         onChange={({ target }) => setAuthor(target.value)}
         required
@@ -53,6 +55,7 @@ const CreateBlog = ({ createNewBlog }) => {
       <input
         name="url"
         type="text"
+        placeholder='url'
         value={url}
         onChange={({ target }) => setUrl(target.value)}
         required
@@ -63,6 +66,7 @@ const CreateBlog = ({ createNewBlog }) => {
       <input
         name="likes"
         type="text"
+        placeholder='likes'
         value={blogLikes}
         onChange={({ target }) => setBlogLikes(target.value)}
       />

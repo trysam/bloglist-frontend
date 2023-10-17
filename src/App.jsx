@@ -4,6 +4,7 @@ import Login from './components/Login'
 import blogService from './services/blogs'
 import CreateBlog from './components/createBlog'
 import ToggleableButton from './components/toggleableButton'
+import Notification from './components/notification'
 
 const App = () => {
   const [blogs, setBlogs] = useState([])
@@ -98,16 +99,7 @@ const App = () => {
   return (
     <div>
       <h2>blogs</h2>
-      {errorMessage &&
-          <h2 style={{ color:'red', outline:'Solid Red', backgroundColor:'#FAA0A0' }}>
-            {errorMessage}
-          </h2>
-      }
-      {successMessage &&
-          <h2 style={{ color:'Green', outline:'Solid Green', backgroundColor:'#DAF7A6' }}>
-            {successMessage}
-          </h2>
-      }
+      <Notification errorMessage={errorMessage} successMessage={successMessage}/>
       {
         appUser === null
           ? <ToggleableButton buttonLabel="Login Here">

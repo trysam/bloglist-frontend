@@ -30,6 +30,6 @@ ToggleableButton.propTypes = {
   buttonLabel: PropTypes.string.isRequired
 }
 
-ToggleableButton.displayName(ToggleableButton)
+
 
 export default ToggleableButton

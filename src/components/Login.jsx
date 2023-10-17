@@ -17,7 +17,7 @@ const Login = ({ setErrorMessage, setSuccessMessage, setAppUser }) => {
       setUsername('')
       setPassword('')
       setAppUser(user)
-      setSuccessMessage(`Welcome ${user.name}`)
+      setSuccessMessage(`Welcome ${user.username}`)
       setTimeout(() => setSuccessMessage(null), 5000)
     } catch(exemption){
       setErrorMessage('Wrong Credentials')
@@ -34,6 +34,7 @@ const Login = ({ setErrorMessage, setSuccessMessage, setAppUser }) => {
         type="text"
         name="username"
         value={username}
+        id='username'
         onChange={({ target }) => setUsername(target.value)}
         required
       />
@@ -44,12 +45,13 @@ const Login = ({ setErrorMessage, setSuccessMessage, setAppUser }) => {
       <input
         type="password"
         name="password"
+        id='password'
         value={password}
         onChange={({ target }) => setPassword(target.value)}
         required
       />
     </div>
-    <button type="submit">Login</button>
+    <button id='login' type="submit">Login</button>
   </form>
 
 }
